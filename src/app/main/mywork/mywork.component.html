@@ -1,0 +1,18 @@
+<div id="myWork_wrapper">
+    <div class="left_side">
+        <ul>
+            <li><a href="" routerLink='/main/mywork/logos' [routerLinkActive]="['active']">LOGOS</a></li>
+            <li><a href="" routerLink='/main/mywork/2dart' [routerLinkActive]="['active']">2D ART</a></li>
+            <li><a href="" routerLink='/main/mywork/businesscards' [routerLinkActive]="['active']">BUSINESS CARDS</a></li>
+            <li><a href="" routerLink='/main/mywork/patterns' [routerLinkActive]="['active']">PATTERNS</a></li>
+            <li><a href="" routerLink='/main/mywork/bookillustrations' [routerLinkActive]="['active']">BOOK ILLUSTRATIONS</a></li>
+            <li><a href="" routerLink='/main/mywork/illustrations' [routerLinkActive]="['active']">ILLUSTRATIONS</a></li>
+            <li><a href="" routerLink='/main/mywork/digitalpaintings' [routerLinkActive]="['active']">DIGITAL PAINTINGS</a></li>
+            <li><a href="" routerLink='/main/mywork/3dmodeling' [routerLinkActive]="['active']">3D MODELING</a></li>
+            <li><a href="" routerLink='/main/mywork/sculptures' [routerLinkActive]="['active']">SCULPTURES</a></li>
+        </ul>
+    </div>
+    <div class="right_side" [@animateGallery]="exp">
+        <router-outlet></router-outlet>
+    </div>
+</div>

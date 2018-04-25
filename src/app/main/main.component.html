@@ -1,0 +1,14 @@
+<main>
+    <nav class="nav_bar">
+        <ul>
+            <li><a href="" routerLink='/intro'>YOBU ^<br> &nbsp;DESIGN</a></li>
+            <li><a href="" routerLink='/main/about' (click)="abcont = !abcont" [routerLinkActive]="['active']">About</a></li>
+            <li><a href="" routerLink='/main/mywork' [routerLinkActive]="['active']">My Work</a></li>
+            <li><a href="" routerLink='/main/contact' (click)="abcont = !abcont" [routerLinkActive]="['active']">Contact</a></li>
+
+        </ul>
+    </nav>
+    <div [@animateAbCon]="abcont">
+        <router-outlet></router-outlet>
+    </div>
+</main>

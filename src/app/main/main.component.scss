@@ -1,0 +1,78 @@
+@font-face {
+    font-family: 'yoburegular';
+    src: url('/assets/yobu-webfont.woff2') format('woff2'), url('/assets/yobu-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nidus_sansregular';
+    src: url('/assets/nidsans-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/nidsans-webfont.woff2') format('woff2'), url('/assets/nidsans-webfont.woff') format('woff'), url('/assets/nidsans-webfont.ttf') format('truetype'), url('/assets/nidsans-webfont.svg#nidus_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+main {
+    padding-top: 50px;
+}
+
+.nav_bar {
+    display: block;
+    position: absolute;
+    top: 0;
+    lefT: 0;
+    right: 0;
+    height: 50px;
+    background: transparent;
+    clear: both;
+}
+
+ul {
+    height: 50px;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 70% 10% 10% 10%;
+    grid-template-rows: auto;
+    grid-template-areas: "one two three four";
+}
+
+li {
+    display: block;
+    justify-self: center;
+    align-self: center;
+}
+
+li a {
+    font-family: 'nidus_sansregular';
+    text-decoration: none;
+    color: black;
+    border: 1px solid transparent;
+    padding: 5px 10px;
+    transition: all .3s ease;
+    display: block;
+}
+
+li a.active,
+li a:hover {
+    border: 1px solid black;
+    background: #f3f3f3;
+}
+
+li:first-child a:hover {
+    border: 1px solid transparent;
+    background: transparent;
+}
+
+li:first-child a {
+    font-family: 'yoburegular';
+    font-size: 20px;
+    line-height: 22px;
+}
+
+li:first-of-type {
+    align-self: center;
+    justify-self: start;
+    margin-left: 25px;
+}

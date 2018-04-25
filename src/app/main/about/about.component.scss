@@ -1,0 +1,46 @@
+@font-face {
+    font-family: 'nidus_sansregular';
+    src: url('/assets/nidsans-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/nidsans-webfont.woff2') format('woff2'), url('/assets/nidsans-webfont.woff') format('woff'), url('/assets/nidsans-webfont.ttf') format('truetype'), url('/assets/nidsans-webfont.svg#nidus_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:host {
+    display: block;
+}
+
+#about_wrapper {
+    display: grid;
+    grid-template-columns: 70% 25% 5%;
+    grid-template-rows: auto;
+    grid-template-areas: "left right margin";
+    height: calc(100vh - 50px);
+    width: 100%;
+}
+
+.left_side {
+    width: 60%;
+    height: auto;
+    justify-self: center;
+    align-self: center;
+}
+
+.left_side h1,
+.left_side p {
+    font-family: 'nidus_sansregular';
+}
+
+.right_side {
+    width: 100%;
+    height: auto;
+    justify-self: center;
+    align-self: start;
+    padding-top: 50px;
+}
+
+.right_side img {
+    overflow: hidden;
+    max-width: 100%;
+    height: auto;
+    border-radius: 100%;
+}

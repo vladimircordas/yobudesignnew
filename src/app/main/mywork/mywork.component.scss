@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'nidus_sansregular';
+    src: url('/assets/nidsans-webfont.eot?#iefix') format('embedded-opentype'), url('/assets/nidsans-webfont.woff2') format('woff2'), url('/assets/nidsans-webfont.woff') format('woff'), url('/assets/nidsans-webfont.ttf') format('truetype'), url('/assets/nidsans-webfont.svg#nidus_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:host {
+    display: block;
+}
+
+#myWork_wrapper {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: auto;
+    grid-template-areas: "left right";
+    height: calc(100vh - 50px);
+    width: 100%;
+}
+
+.left_side,
+.right_side {
+    align-self: center;
+    justify-self: center;
+}
+
+.left_side {
+    justify-self: end;
+    margin-right: 50px;
+}
+
+.right_side {
+    width: 100%;
+}
+
+@keyframes leftSideEntry {
+    0% {
+        transform: rotateY(90deg);
+    }
+    50% {
+        transform: rotateY(90deg);
+    }
+    100% {
+        transform: rotateY(0deg);
+    }
+}
+
+
+/*
+@keyframes rightSideEntry {
+    0% {
+        transform: translateY(-1500px);
+    }
+    50% {
+        transform: translateY(-1500px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+*/
+
+.left_side {
+    animation: leftSideEntry .5s ease;
+}
+
+.right_side {
+    animation: rightSideEntry 2s ease;
+}
+
+.left_side ul {
+    list-style: none;
+    position: relative;
+}
+
+.left_side ul:after {
+    position: absolute;
+    top: -40px;
+    bottom: -50px;
+    right: -305px;
+    display: block;
+    content: "";
+    width: 100%;
+    border: 1px solid black;
+    border-right: none;
+}
+
+.left_side ul li {
+    margin-bottom: 20px;
+    position: relative;
+    min-width: 250px;
+}
+
+.left_side ul li a {
+    font-family: 'nidus_sansregular';
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 5px 5px 5px 10px;
+    border: 1px solid transparent;
+    transition: all .3s ease;
+}
+
+.left_side ul li a.active,
+.left_side ul li a:hover {
+    border: 1px solid black;
+}
+
+.left_side ul li a.active {
+    background: #f3f3f3;
+}
+
+.active:after {
+    position: absolute;
+    top: 50%;
+    right: -15px;
+    display: block;
+    height: 0;
+    width: 15px;
+    border-bottom: 1px solid black;
+    content: "";
+}
+
+@media screen and (max-width: 1024px) {
+    #myWork_wrapper {
+        grid-template-columns: 5% 35% 55% 5%;
+    }
+    .left_side {
+        grid-column-start: 2;
+        margin-right: 30px;
+    }
+    .right_side {
+        grid-column-start: 3;
+    }
+}
